@@ -6,6 +6,7 @@ from time import sleep
 from player import Player
 from mappa import mappa_big as mappa
 
+##Thise doubles the map with an inverted version of itself
 mappaReversed :list[list] = mappa[::]
 mappaReversed.reverse()
 mappaReversed[-1][0]=0
@@ -17,6 +18,7 @@ for index, layer in enumerate(mappaReversed):
 for layer in mappa:
     layer.append(1)
 
+#add the target at the and of the path
 mappa[0][-2] = 9
 
 # Definisci i colori
